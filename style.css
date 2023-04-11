@@ -1,0 +1,175 @@
+/* cascade style sheet */
+@import url('https://fonts.googleapis.com/css2? family= Piedra & display=swap');
+
+
+*{
+    font-family: 'Piedra', cursive;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+ 
+}
+
+body{
+    background-color: rgba(104, 103, 104, 0.835);
+}
+a{
+    color: aqua;
+    text-decoration: none;
+    
+}
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;/* centra los links conrespecto al titulo */
+    justify-content: space-between;/* dispone el espacio entre el h1 y los links */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 5px;
+    border: 2px solid black;
+    margin-left: 15px;
+    margin-right: 15px;
+    box-shadow: 10px 10px 3px aqua;
+    border-radius: 20px;
+
+}
+
+nav{
+    display: flex;/* si o si para hacer el resto */
+    gap: 30px;/*  espaciado entre los links */
+}
+@keyframes right-to-left{
+    0%{
+        transform: translateX(500px);
+    }
+    100%{
+        transform: translateX(0px);
+
+        }
+        
+}
+nav a:hover{
+    color: black;
+    background-color:aqua;
+    border-radius: 15px;
+    transition: 1s ease-out;
+}
+@keyframes left-to-right{
+    0%{
+        transform: translateX(-500px);
+    }
+    100%{
+        transform: translateX(0px);
+
+        }
+        
+}
+@keyframes up-to-down{
+    0%{
+        transform: translateY(-100px);
+    }
+    100%{
+        transform: translateY(0px);
+
+        }
+    }
+
+h1{
+    color: black;
+    border-color: aqua
+
+}
+.caja1{
+    width: 500px;
+    height: 400px;
+    background-color: rgb(163, 161, 157);
+    display: flex;
+    border:solid 2px black;
+    border-radius: 20px;
+    box-shadow: 7px 7px 3px aqua;
+    padding: 5px 8px 5px 8px;
+    margin: 30px 400px;
+    /* text-align: center; para centrar el texto de la caja*/
+    
+    
+    
+}
+.bi-amd{
+  color: aqua;
+
+}
+h1:hover .bi-amd::before{
+    transform: rotate(360deg);
+    transition: 1s ease-in;
+   
+    
+}
+footer{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+    height: 40%;
+    }
+main{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+    bottom: 50px;
+}
+section a:hover{
+    color: black;
+    background-color: aqua;
+    border-radius: 7px;
+    transition: 1s ease-out;
+
+}
+header h1{
+    animation-name: left-to-right;
+    animation-duration: 2s;
+}
+header h2{
+    animation: up-to-down;
+    animation-duration: 2s;
+}
+nav a{
+    animation: right-to-left;
+    animation-duration: 2s;
+}
+@keyframes down-to-up{
+    0%{
+        transform: translateY(500px);
+    }
+    100%{
+        transform: translateY(0px);
+
+        }
+        
+}
+main section{
+    animation: down-to-up;
+    animation-duration: 2s;
+}
+footer{
+    animation: down-to-up;
+    animation-duration: 2s;
+    display: flex;
+    
+}
+.caja2{
+    width: 100vw;
+    height: 10vh;
+    background-color: rgb(163, 161, 157);
+    display: flex;
+    border:solid 1px black;
+    /* margin: 0px; */
+    margin-right: 0%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
